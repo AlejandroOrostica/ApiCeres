@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Page;
 
 class PageController extends Controller
 {
@@ -13,7 +14,14 @@ class PageController extends Controller
      */
     public function index()
     {
-        //
+        $pages = Page::all();
+        return $pages;
+    }
+
+    public function user_pages($user_id)
+    {
+        $user_pages = Page::where('user_id', $user_id)->get();
+        return $user_pages;
     }
 
     /**
@@ -57,7 +65,7 @@ class PageController extends Controller
     public function edit($id)
     {
         $page = Page::find($id);
-        return view('pages.user.show')->with('page', $page)
+        //return view('pages.user.show')->with('page', $page);
     }
 
     /**

@@ -21,8 +21,7 @@ class UserController extends Controller
     public function index()
     {
         $users = User::all();
-
-        return view('pages.user.index', compact('users'));
+        return $users;
     }
 
     /**
@@ -32,7 +31,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('pages.user.create');
+        //return view('pages.user.create');
     }
 
     /**
@@ -58,7 +57,7 @@ class UserController extends Controller
             //'userCharge'=>$data['userCharge']
         ]);
 
-        return redirect()->route('pages.index')->with('notice', 'Se ha creado usuario.');
+        //return redirect()->route('pages.index')->with('notice', 'Se ha creado usuario.');
     }
 
     /**
@@ -70,11 +69,14 @@ class UserController extends Controller
     public function show($id)
     {
         $user = User::find($id);
+        return $user;
+        /*
+        $user = User::find($id);
         $grades = DB::table('grades')->orderBy('gradeyear', 'desc')->get();
         $projects = DB::table('projects')->orderBy('projectInit', 'desc')->get();
         $investigations = DB::table('investigations')->orderBy('investigationYear', 'desc')->get();
         $pages =Page::all();
-        return view('pages.user.show', compact('user', 'grades', 'projects', 'pages', 'investigations'));
+        return view('pages.user.show', compact('user', 'grades', 'projects', 'pages', 'investigations'));*/
     }
 
     /**

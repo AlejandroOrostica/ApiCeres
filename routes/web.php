@@ -10,7 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+/*
 Route::get('/', function () {
     return view('pages.index', compact('users'));
 })->name('pages.index');
@@ -25,8 +25,7 @@ Route::get("getData", function()
  return Response::json(array(
  "users" => $users
  ));
- 
-});
+});*/
 
 
 
@@ -38,22 +37,23 @@ Route::resource('grade','GradeController');
 Route::resource('file', 'FileController');
 Route::resource('investigation', 'InvestigationController');
 
+//Ruta para las paginas de un usuario.
+Route::get('/{user_id}/pages','PageController@user_pages');
+//Ruta para obtener las investigaciones de una pagina de un usuario.
+Route::get('/{page_id}/investigations','InvestigationController@user_page_investigation');
+
+
+/*
 Route::get('/statistics', function () {
     return view('pages.statistics');
 })->name('pages.statistics');
 
 //creacion de usuario
 Route::get('pages.projects/{id}', 'ProjectController@show');
-
-
 Route::get('/user/create','UserController@create');
 Route::post('/user/create','UserController@store');
 Route::post('/investigation/store/{id}','InvestigationController@store');
 Route::get('/publicaciones/create/{id}','InvestigationController@create');
-
-
-
-
 
 //edicion de usuario
 Route::get('editar/{id}', 'InvestigationController@edit');
@@ -65,3 +65,4 @@ Route::get('/home', 'HomeController@index')->name('pages.home');
 
 Route::get('oauth/{driver}', 'Auth\SocialAuthController@redirectToProvider')->name('social.oauth');
 Route::get('oauth/{driver}/callback', 'Auth\SocialAuthController@handleProviderCallback')->name('social.callback');
+*/

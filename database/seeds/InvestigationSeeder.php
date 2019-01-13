@@ -782,7 +782,7 @@ class InvestigationSeeder extends Seeder
                 'investigationName' => 'Crawling a country: better strategies than breadth-first for web page ordering',
                 'investigationYear' => '2005',
                 'investigationAuthors' => 'Ricardo Baeza-Yates, Carlos Castillo, Mauricio Marin, Andrea Rodriguez',
-                'page_id' => 39,
+                'page_id' => 30,
             ]
         );
         DB::table('investigations')->insert(
@@ -790,7 +790,7 @@ class InvestigationSeeder extends Seeder
                 'investigationName' => 'Efficient algorithms for many-body hard particle molecular dynamics',
                 'investigationYear' => '1993',
                 'investigationAuthors' => 'Mauricio Marı́n, Dino Risso, Patricio Cordero',
-                'page_id' => 39,
+                'page_id' => 30,
             ]
         );
         DB::table('investigations')->insert(
@@ -798,7 +798,7 @@ class InvestigationSeeder extends Seeder
                 'investigationName' => 'Scheduling algorithms for Web crawling',
                 'investigationYear' => '2004',
                 'investigationAuthors' => 'Carlos Castillo, Mauricio Marin, Andrea Rodriguez, Ricardo Baeza-Yates',
-                'page_id' => 39,
+                'page_id' => 30,
             ]
         );
         DB::table('investigations')->insert(
@@ -806,7 +806,7 @@ class InvestigationSeeder extends Seeder
                 'investigationName' => 'An empirical assessment of priority queues in event-driven molecular dynamics simulation',
                 'investigationYear' => '1995',
                 'investigationAuthors' => 'Mauricio Marín, Patricio Cordero',
-                'page_id' => 39,
+                'page_id' => 30,
             ]
         );
         DB::table('investigations')->insert(
@@ -814,7 +814,7 @@ class InvestigationSeeder extends Seeder
                 'investigationName' => 'New caching techniques for web search engines',
                 'investigationYear' => '2010',
                 'investigationAuthors' => 'Mauricio Marin, Veronica Gil-Costa, Carlos Gomez-Pantoja',
-                'page_id' => 39,
+                'page_id' => 30,
             ]
         );
         DB::table('investigations')->insert(
@@ -822,7 +822,7 @@ class InvestigationSeeder extends Seeder
                 'investigationName' => 'Parallel query processing on distributed clustering indexes',
                 'investigationYear' => '2009',
                 'investigationAuthors' => 'Veronica Gil-Costa, Mauricio Marin, Nora Reyes',
-                'page_id' => 39,
+                'page_id' => 30,
             ]
         );
         DB::table('investigations')->insert(
@@ -830,7 +830,7 @@ class InvestigationSeeder extends Seeder
                 'investigationName' => 'kNN query processing in metric spaces using GPUs',
                 'investigationYear' => '2011',
                 'investigationAuthors' => 'Ricardo J Barrientos, José I Gómez, Christian Tenllado, Manuel Prieto Matias, Mauricio Marin',
-                'page_id' => 39,
+                'page_id' => 30,
             ]
         );
         DB::table('investigations')->insert(
@@ -838,7 +838,7 @@ class InvestigationSeeder extends Seeder
                 'investigationName' => 'High-performance distributed inverted files',
                 'investigationYear' => '2007',
                 'investigationAuthors' => 'Mauricio Marin, Veronica Gil-Costa',
-                'page_id' => 39,
+                'page_id' => 30,
             ]
         );
         DB::table('investigations')->insert(
@@ -846,7 +846,7 @@ class InvestigationSeeder extends Seeder
                 'investigationName' => 'Scheduling metric-space queries processing on multi-core processors',
                 'investigationYear' => '2010',
                 'investigationAuthors' => 'Veronica Gil-Costa, Ricardo Barrientos, Mauricio Marin, Carolina Bonacic',
-                'page_id' => 39,
+                'page_id' => 30,
             ]
         );
         DB::table('investigations')->insert(
@@ -854,7 +854,7 @@ class InvestigationSeeder extends Seeder
                 'investigationName' => 'Sync/async parallel search for the efficient design and construction of web search engines',
                 'investigationYear' => '2010',
                 'investigationAuthors' => 'Mauricio Marin, Veronica Gil-Costa, Carolina Bonacic, Ricardo Baeza-Yates, Isaac D Scherson',
-                'page_id' => 39,
+                'page_id' => 30,
             ]
         );
         DB::table('investigations')->insert(
@@ -862,7 +862,7 @@ class InvestigationSeeder extends Seeder
                 'investigationName' => 'To index or not to index: time-space trade-offs in search engines with positional ranking functions',
                 'investigationYear' => '2012',
                 'investigationAuthors' => 'Diego Arroyuelo, Senén González, Mauricio Marin, Mauricio Oyarzún, Torsten Suel',
-                'page_id' => 39,
+                'page_id' => 30,
             ]
         );
         DB::table('investigations')->insert(
@@ -870,7 +870,7 @@ class InvestigationSeeder extends Seeder
                 'investigationName' => 'High-performance priority queues for parallel crawlers',
                 'investigationYear' => '2008',
                 'investigationAuthors' => 'Mauricio Marin, Rodrigo Paredes, Carolina Bonacic',
-                'page_id' => 39,
+                'page_id' => 30,
             ]
         );
         DB::table('investigations')->insert(
@@ -878,7 +878,7 @@ class InvestigationSeeder extends Seeder
                 'investigationName' => 'Event-driven hard-particle molecular dynamics using bulk-synchronous parallelism',
                 'investigationYear' => '1997',
                 'investigationAuthors' => 'Mauricio Marín',
-                'page_id' => 39,
+                'page_id' => 30,
             ]
         );
         DB::table('investigations')->insert(
@@ -886,7 +886,7 @@ class InvestigationSeeder extends Seeder
                 'investigationName' => 'Capacity planning for vertical search engines: An approach based on coloured petri nets',
                 'investigationYear' => '2012',
                 'investigationAuthors' => 'Veronica Gil-Costa, Jair Lobos, Alonso Inostrosa-Psijas, Mauricio Marin',
-                'page_id' => 39,
+                'page_id' => 30,
             ]
         );
         DB::table('investigations')->insert(
@@ -894,7 +894,7 @@ class InvestigationSeeder extends Seeder
                 'investigationName' => 'Capacity planning for vertical search engines: An approach based on coloured petri nets',
                 'investigationYear' => '2012',
                 'investigationAuthors' => 'Veronica Gil-Costa, Jair Lobos, Alonso Inostrosa-Psijas, Mauricio Marin',
-                'page_id' => 39,
+                'page_id' => 30,
             ]
         );
         DB::table('investigations')->insert(
@@ -902,7 +902,7 @@ class InvestigationSeeder extends Seeder
                 'investigationName' => 'A search engine index for multimedia content',
                 'investigationYear' => '2008',
                 'investigationAuthors' => 'Mauricio Marin, Veronica Gil-Costa, Carolina Bonacic',
-                'page_id' => 39,
+                'page_id' => 30,
             ]
         );
         DB::table('investigations')->insert(
@@ -910,7 +910,7 @@ class InvestigationSeeder extends Seeder
                 'investigationName' => 'Distributed search based on self-indexed compressed text',
                 'investigationYear' => '2012',
                 'investigationAuthors' => 'Diego Arroyuelo, Veronica Gil-Costa, Senén González, Mauricio Marin, Mauricio Oyarzún',
-                'page_id' => 39,
+                'page_id' => 30,
             ]
         );
         DB::table('investigations')->insert(
@@ -918,7 +918,7 @@ class InvestigationSeeder extends Seeder
                 'investigationName' => 'Time Warp on BSP computers',
                 'investigationYear' => '1998',
                 'investigationAuthors' => 'Mauricio Marín',
-                'page_id' => 39,
+                'page_id' => 30,
             ]
         );
         DB::table('investigations')->insert(
@@ -926,7 +926,7 @@ class InvestigationSeeder extends Seeder
                 'investigationName' => 'Distributing a metric-space search index onto processors',
                 'investigationYear' => '2010',
                 'investigationAuthors' => 'Mauricio Marin, Flavio Ferrarotti, Veronica Gil-Costa',
-                'page_id' => 39,
+                'page_id' => 30,
             ]
         );
         DB::table('investigations')->insert(
@@ -934,7 +934,7 @@ class InvestigationSeeder extends Seeder
                 'investigationName' => 'Searching and updating metric space databases using the parallel EGNAT',
                 'investigationYear' => '2007',
                 'investigationAuthors' => 'Mauricio Marin, Roberto Uribe, Ricardo Barrientos',
-                'page_id' => 39,
+                'page_id' => 30,
             ]
         );
         DB::table('investigations')->insert(
@@ -942,7 +942,7 @@ class InvestigationSeeder extends Seeder
                 'investigationName' => 'An index data structure for searching in metric space databases',
                 'investigationYear' => '2006',
                 'investigationAuthors' => 'Roberto Uribe, Gonzalo Navarro, Ricardo J Barrientos, Mauricio Marín',
-                'page_id' => 39,
+                'page_id' => 30,
             ]
         );
     }

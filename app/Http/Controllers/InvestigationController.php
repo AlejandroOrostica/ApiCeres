@@ -21,7 +21,14 @@ class InvestigationController extends Controller
      */
     public function index()
     {
-        
+        $investigations = Investigation::all();
+        return $investigations;
+    }
+
+    public function user_page_investigation($page_id)
+    {
+        $investigations = Investigation::where('page_id', $page_id)->get();
+        return $investigations;
     }
 
     /**
