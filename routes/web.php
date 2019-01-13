@@ -41,6 +41,13 @@ Route::resource('investigation', 'InvestigationController');
 Route::get('/{user_id}/pages','PageController@user_pages');
 //Ruta para obtener las investigaciones de una pagina de un usuario.
 Route::get('/{page_id}/investigations','InvestigationController@user_page_investigation');
+//Ruta para obtener los grados de un usuario
+Route::get('/{user_id}/grades','GradeController@user_grades');
+//Ruta para obtener los proyectos de un usuario
+Route::get('/{user_id}/projects','ProjectController@user_projects');
+
+Route::get('/{user_id}/investigations','InvestigationController@user_investigations');
+
 
 
 /*

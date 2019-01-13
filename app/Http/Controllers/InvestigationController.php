@@ -31,6 +31,12 @@ class InvestigationController extends Controller
         return $investigations;
     }
 
+    public function user_investigations($user_id)
+    {
+        $investigations = Investigation::where('user_id', $user_id)->get();
+        return $investigations;
+    }
+
     /**
      * Show the form for creating a new resource.
      *

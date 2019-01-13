@@ -20,6 +20,12 @@ class GradeController extends Controller
         return view('grades.index',compact('grade'));
     }
 
+    public function user_grades($user_id)
+    {
+        $grades = Grade::where('user_id', $user_id)->get();
+        return $grades;
+    }
+
     /**
      * Show the form for creating a new resource.
      *

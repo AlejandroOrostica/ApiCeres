@@ -21,6 +21,12 @@ class ProjectController extends Controller
         //
     }
 
+    public function user_projects($user_id)
+    {
+        $projects = Project::where('user_id', $user_id)->get();
+        return $projects;
+    }
+
     /**
      * Show the form for creating a new resource.
      *
