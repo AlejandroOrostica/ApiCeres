@@ -25,10 +25,12 @@ class InvestigationController extends Controller
         return $investigations;
     }
 
-    public function user_page_investigation($page_id)
+    public function user_page_investigation($user_id, $pageName)
     {
-        $investigations = Investigation::where('page_id', $page_id)->get();
-        return $investigations;
+        $pages = Page::where('user_id', $user_id)->where('pageName', $pageName)->first();
+
+
+        return $pages->investigations;
     }
 
     public function user_investigations($user_id)
