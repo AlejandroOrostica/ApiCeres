@@ -16,8 +16,8 @@ class GradeController extends Controller
     {
         //Función Inicial que redirige a la vista index de grades
         //Retorna una lista con todos los grades existentes
-        $grade=Grade::all();
-        return view('grades.index',compact('grade'));
+        $grade = Grade::all();
+        return $grade;
     }
 
     public function user_grades($user_id)
@@ -57,8 +57,8 @@ class GradeController extends Controller
             $grade->save();
 
             // redirect
-            Session::flash('message', 'Successfully created nerd!');
-            return redirect()->back()->with($notificacion);     
+            //Session::flash('message', 'Successfully created nerd!');
+           // return redirect()->back()->with($notificacion);     
     }
 
     /**
@@ -67,9 +67,10 @@ class GradeController extends Controller
      * @param  \App\Grade  $grade
      * @return \Illuminate\Http\Response
      */
-    public function show(Grade $grade)
+    public function show($id)
     {
-        return view('pages.user.show', compact('grade'));
+        $grade = Grade::find($id);
+        return $grade;
 
     }
 

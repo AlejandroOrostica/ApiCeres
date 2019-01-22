@@ -53,7 +53,8 @@ class PageController extends Controller
      */
     public function show($id)
     {
-        //
+        $page = Page::find($id);
+        return $page;
     }
 
     /**

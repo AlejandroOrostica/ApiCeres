@@ -36,6 +36,7 @@ Route::resource('project','ProjectController');
 Route::resource('grade','GradeController');
 Route::resource('file', 'FileController');
 Route::resource('investigation', 'InvestigationController');
+Route::resource('page', 'PageController');
 
 //Ruta para las paginas de un usuario.
 Route::get('/{user_id}/pages','PageController@user_pages');
@@ -45,8 +46,14 @@ Route::get('/{user_id}/{pageName}/investigations','InvestigationController@user_
 Route::get('/{user_id}/grades','GradeController@user_grades');
 //Ruta para obtener los proyectos de un usuario
 Route::get('/{user_id}/projects','ProjectController@user_projects');
-//Ruta para obtener las investigaciones de un usuario
-//Route::get('/{user_id}/investigations','InvestigationController@user_investigations');
+Route::get('/{user_id}/investigations', 'InvestigationController@user_investigations');
+
+//Route::get('/investigation/{id}', 'InvestigationController@show');
+//Route::get('/grade/{id}', 'GradeController@show');
+//Route::get('/page/{id}', 'PageController@show');
+
+
+//Route::put('investigation/update/{id}', 'InvestigationController@update');
 
 
 

@@ -15,7 +15,7 @@ class PageTableSeeder extends Seeder
         //Google Schoolar
         DB::table('pages')->insert(
             [
-                'pageName' => 'Google Scholar',
+                'pageName' => 'GoogleScholar',
                 'pageUrl' => 'https://scholar.google.cl/citations?user=zgG5YN0AAAAJ&hl=es&oi=ao#',
                 'user_id' => 1
             ]
@@ -40,7 +40,7 @@ class PageTableSeeder extends Seeder
         //Google schoolar
         DB::table('pages')->insert(
             [
-                'pageName' => 'Google Scholar',
+                'pageName' => 'GoogleScholar',
                 'pageUrl' => 'https://scholar.google.cl/citations?user=_z5EDa4AAAAJ&hl=es&oi=sra',
                 'user_id' => 2
             ]
@@ -64,7 +64,7 @@ class PageTableSeeder extends Seeder
 //JL
         DB::table('pages')->insert(
             [
-                'pageName' => 'Google Scholar',
+                'pageName' => 'GoogleScholar',
                 'pageUrl' => 'https://scholar.google.cl/citations?user=Cib4lnQAAAAJ&hl=es&oi=ao',
                 'user_id' => 10
             ]
@@ -101,7 +101,7 @@ class PageTableSeeder extends Seeder
 //LEONEL MEDINA
         DB::table('pages')->insert(
             [
-                'pageName' => 'Google Scholar',
+                'pageName' => 'GoogleScholar',
                 'pageUrl' => 'https://scholar.google.cl/citations?user=ATlebyEAAAAJ&hl=es&oi=sra',
                 'user_id' => 4
             ]
@@ -125,7 +125,7 @@ class PageTableSeeder extends Seeder
 //Gonzalo ACUÑA        
         DB::table('pages')->insert(
             [
-                'pageName' => 'Google Scholar',
+                'pageName' => 'GoogleScholar',
                 'pageUrl' => 'https://scholar.google.cl/citations?user=1bKq5i8AAAAJ&hl=es&oi=ao',
                 'user_id' => 5
             ]
@@ -177,7 +177,7 @@ class PageTableSeeder extends Seeder
 //MAX CHACON        
                 DB::table('pages')->insert(
             [
-                'pageName' => 'Google Scholar',
+                'pageName' => 'GoogleScholar',
                 'pageUrl' => 'https://scholar.google.cl/citations?user=n9GPFCUAAAAJ&hl=es&oi=ao',
                 'user_id' => 7
             ]
@@ -203,7 +203,7 @@ class PageTableSeeder extends Seeder
 //Mario INOSTROZA        
                 DB::table('pages')->insert(
             [
-                'pageName' => 'Google Scholar',
+                'pageName' => 'GoogleScholar',
                 'pageUrl' => 'https://scholar.google.cl/citations?user=Cib4lnQAAAAJ&hl=es&oi=ao',
                 'user_id' => 9
             ]
@@ -264,7 +264,7 @@ class PageTableSeeder extends Seeder
 //MAURICIO MARIN
                 DB::table('pages')->insert(
             [
-                'pageName' => 'Google Scholar',
+                'pageName' => 'GoogleScholar',
                 'pageUrl' => 'https://scholar.google.cl/citations?user=t0-RzjEAAAAJ&hl=es&oi=ao',
                 'user_id' => 13
             ]
@@ -288,7 +288,7 @@ class PageTableSeeder extends Seeder
 //Alcides Quispe        
                 DB::table('pages')->insert(
             [
-                'pageName' => 'Google Scholar',
+                'pageName' => 'GoogleScholar',
                 'pageUrl' => 'https://scholar.google.cl/citations?user=s96onl8AAAAJ&hl=es&oi=ao',
                 'user_id' => 15
             ]
@@ -324,7 +324,7 @@ class PageTableSeeder extends Seeder
 //PABLO ROMAN        
                 DB::table('pages')->insert(
             [
-                'pageName' => 'Google Scholar',
+                'pageName' => 'GoogleScholar',
                 'pageUrl' => 'https://scholar.google.cl/citations?user=uwVKal0AAAAJ&hl=es&oi=ao',
                 'user_id' => 17
             ]

@@ -1,19 +1,48 @@
 <?php
 
 namespace App\Http\Controllers;
-use Illuminate\Support\Facades\Redirect;
+//use Illuminate\Support\Facades\Redirect;
 use Illuminate\Http\Request;
 use App\User;
 use App\Grade;
 use App\Project;
 use App\Page;
 use App\Investigation;
-use Illuminate\Support\Facades\Input;
+//use Illuminate\Support\Facades\Input;
 use DB;
-use App\Quotation;
+//use App\Quotation;
+use Validator;
 //use App\Http\Controllers\Auth;
 class InvestigationController extends Controller
 {
+    public function rules(){
+        return[
+        'destino' =>  'required|string',
+        'nombre_actividad' => 'required|string',
+        'precio' => 'required|numeric',
+        'cantidad_adulto' => 'required|numeric',
+        'cantidad_ninos' => 'required|numeric',
+        'fecha_ida' => 'required|date',
+        'fecha_vuelta' => 'required|date',
+        ];
+    }
+
+    public function rules2(){
+        return[
+        'destino' =>  'nullable|string',
+        'nombre_actividad' => 'nullable|string',
+        'precio' => 'nullable|numeric',
+        'cantidad_adulto' => 'nullable|numeric',
+        'cantidad_ninos' => 'nullable|numeric',
+        'fecha_ida' => 'nullable|date',
+        'fecha_vuelta' => 'nullable|date',
+        ];
+    }
+
+
+
+
+
     /**
      * Display a listing of the resource.
      *
@@ -33,11 +62,13 @@ class InvestigationController extends Controller
         return $pages->investigations;
     }
 
-    public function user_investigations($user_id)
+  /*  public function user_investigations($user_id)
     {
-        $investigations = Investigation::where('user_id', $user_id)->get();
+        $ids_pages = Page::where('user_id', $user_id)->get('id'); 
+
+        $investigations = Investigation::where('page_id', $ids_pages)->get(); 
         return $investigations;
-    }
+    } defeat  */ 
 
     /**
      * Show the form for creating a new resource.
@@ -60,7 +91,8 @@ class InvestigationController extends Controller
      */
     public function show($id)
     {
-        
+        $investigation = Investigation::find($id);
+        return $investigation;
     }
 
     /**
@@ -79,29 +111,18 @@ class InvestigationController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Investigation $investigation
      * @return \Illuminate\Http\Response
      */
-    public function update($id)
+    public function update($request ,$id)
     {
-        $rules = array(
-            'investigationName'       => 'required',
-            'investigationYear'      => 'required',
-            'investigationAuthors'      => 'required'
-        );
-        
-            $investigation = Investigation::find($id);
-            $investigation->investigationName = Input::get('investigationName');
-            $investigation->investigationYear = Input::get('investigationYear');
-            $investigation->investigationAuthors = Input::get('investigationAuthors');
-            $investigation->save();
-
-            $notificacion = array(
-            'message' => 'Se guardaron los cambios', 
-            'btn btn-primary' => 'success'
-        );
-
-       return redirect()->back()->with($notificacion);
+        $validador = Validator::make($request->all(),$this->rules2());
+        if($validador->fails()){
+            return $validador->messages();
+        }
+        $investigation = Investigation::where('id', $id)->first();
+        $investigation->update($request->all());
+        return $investigation;
         
         
 
@@ -118,13 +139,13 @@ class InvestigationController extends Controller
      *
      * @return Response
      */
-    public function store(Request  $request)
+    public function guardar(Request  $request)
     {
         
-        $user_id = \Auth::user()->id;
+
 
         //$paper = DB::table('papers')->where('pageName', 'Scopus')->whereIn('user_id', '$user->id')->get();
-        $page = Page::where('user_id', $user_id)->where('pageName', 'Otros')->get()->first();
+     /*   $page = Page::where('user_id', $user_id)->where('pageName', 'Otros')->get()->first();
         $page_id = $page->id;
         $data=request()->validate([
           'investigationName'=>'required',
@@ -137,7 +158,17 @@ class InvestigationController extends Controller
         $investigation->page_id = $page_id;
         $investigation->save();
 
-        return redirect()->route('pages.index')->with('notice', 'Se ha creado usuario.');
+        return redirect()->route('pages.index')->with('notice', 'Se ha creado usuario.');*/
+
+        $validador = Validator::make($request->all(),$this->rules());
+        if($validador->fails()){
+            return $validador->messages();
+        } 
+
+        $investigation = Investigation::create($request->all());
+        $investigation = save();
+        return $investigation;
+
     }
 
     

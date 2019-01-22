@@ -18,7 +18,8 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        //
+        $projects = Project::all();
+        return $projects;
     }
 
     public function user_projects($user_id)
